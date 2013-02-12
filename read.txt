@@ -1,0 +1,11 @@
+php5-odbc php5-mssql
+
+http://jamesrossiter.wordpress.com/2011/03/08/connecting-to-microsoft-sql-server-using-odbc-from-ubuntu-server/
+freeTDS and mssql
+
+
+extension=mssql.so
+Save the php.ini and restart Apache:
+/etc/init.d/httpd restart
+
+Done
