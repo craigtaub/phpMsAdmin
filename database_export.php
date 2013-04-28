@@ -94,6 +94,8 @@ if(!empty($_POST['doexport']))
 
 		if(!empty($_POST['data']))
 		{
+			unset($schema); // Clean-up table schema
+
 			$table_query = @mssql_query('SELECT * FROM ' . $table . ';') or die(throwSQLError('unable to retrieve table data'));
 			while($row = mssql_fetch_assoc($table_query))
 			{
